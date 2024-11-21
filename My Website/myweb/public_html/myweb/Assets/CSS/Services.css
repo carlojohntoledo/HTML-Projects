@@ -1,0 +1,259 @@
+section.Services
+{
+    width: 100%;
+    gap: 20px;
+    display: -ms-inline-grid;
+}
+
+.services-bio-container
+{
+    min-width: 65vw;
+    width: 65%;
+    margin: auto;
+    background-color: #242526;
+    border-radius: 10px;
+    position: relative;
+    margin-top: 30px;
+    padding-bottom: 50px;
+    display: grid;
+    overflow: hidden;
+}
+
+.services-content-container
+{
+    width: 95%;
+    top: 0px;
+    margin: auto;
+    position: relative;
+    display: grid;
+}
+
+.services-content-container #services-title-container
+{
+    position: relative;
+}
+
+
+#services-title-container h1
+{
+    font-size: 2vw;
+    margin: 20px;
+    position: relative;
+}
+
+.services-content-container #services-horizline
+{
+    border: 1px solid #3A3B3C;
+    margin-bottom: 1.5vw;
+}
+
+#services-navbar
+{
+    height: 3.8;
+    display: flex;
+}
+
+#services-navbar a
+{
+    display: block;
+    color: #b0b3b8;
+    text-align: center;
+    padding: 1.1vw 1.2vw;
+    text-decoration: none;
+    font-size: 1.1vw;
+    position: relative;
+    top: 0px;
+    transition: background-color 0.5s, color 0.5s, transform 0.5s;
+}
+
+#services-navbar a:hover 
+{
+    background-color: #3A3B3C;
+    transition: background-color 0.5s, color 0.5s, transform 0.5s;
+}
+  
+#services-navbar a.active 
+{
+    border-bottom: 4px solid #1c6cbb;
+    color: rgb(18, 113, 196);
+    transform: translateY(5px);
+}
+
+#services-content-container1
+{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+#services-logo-container
+{
+    height: 100%;
+    width: 100%;
+    background-color: #b0b3b8;
+    border-radius: 10px;
+    display: grid;
+}
+
+
+#services-logo-container img
+{
+    height: 10vw;
+    width: 18vw;
+    margin: auto;
+    filter: drop-shadow(5px 5px 3px #3A3B3C);
+}
+
+#services-squarelogo-container
+{
+    height: 100%;
+    width: 100%;
+    background-color: #b0b3b8;
+    border-radius: 10px;
+    display: grid;
+}
+
+#services-squarelogo-container img
+{
+    height: 120px;
+    width: 120px;
+    margin: auto;
+    filter: drop-shadow(5px 5px 3px #3A3B3C);
+}
+
+#services-content-container .services-text-container
+{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: block;
+}
+
+.services-text-container .h1-container
+{
+    font-size: 3vw;
+    color: #b0b3b8;
+    margin: auto;
+    height: 4.2vw;
+    text-align: center;
+}
+
+.services-text-container .p-container
+{
+    display: block;
+}
+
+.p-container .first-p
+{
+    font-size: 1.2vw;
+    color: #b0b3b8;
+    margin: 0px;
+    line-height: 1.7vw;
+    margin: 0px;
+    text-align: justify;
+}
+
+.p-container .services-p-container
+{
+    display: flex;
+    min-height: 350px;
+    margin-bottom: 50px;
+}
+
+.services-p-container .services-row-one
+{
+    margin: 10px;
+    display: grid;
+    min-width: 33%;
+}
+
+.services-p-container .services-row-two
+{
+    display: grid;
+    margin: 10px;
+    width: 100%;
+}
+
+.services-p-container .services-row-three
+{
+    margin: 10px;
+    display: grid;
+    width: 100%;
+}
+
+strong
+{
+    color: #1c6cbb;
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+.services-ytvids-container
+{
+    display: grid;
+}
+iframe
+{
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    box-shadow: 5px 10px 15px  #18191A;
+    border-radius: 10px;
+}
+
+.services-row-one .card {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: grid;
+}
+
+.services-row-three .card {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: grid;
+}
+
+.card-inner {
+    transform-style: preserve-3d;
+    transition: transform 0.5s, transform-origin 0.5s;
+    
+}
+
+.card:hover .card-inner {
+    transform: translateY(10px) rotateY(0deg);
+}
+
+.card.clicked .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    background-color: #b0b3b8;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 5px 10px 15px  #18191A;
+    margin: auto;
+}
+
+.card-face .card-p-container
+{
+    font-size: 0.9vw;
+    color: #242526;
+    line-height: 1vw;
+    margin: 1vw;
+    text-align: justify;
+}
+
+.front {
+    transform: rotateY(0deg);
+}
+
+.back {
+    transform: rotateY(180deg);
+}

@@ -1,0 +1,150 @@
+@media only screen and (max-width: 600px)
+{
+
+    .bio-container
+    {
+        width: 100vw;
+        border-radius: 0px;
+        top: 10px;
+        flex-direction: column;
+
+    }
+
+    .bio-container .row-one h1
+    {
+        font-size: 5vw;
+        margin: 2vw;
+    }
+
+    .row-one
+    {
+        min-width: 200px;
+        position: relative;
+        display: block;
+        margin: 3vw;
+    }
+
+    #row-one-container 
+    {
+        width: 100%;
+        display: block;
+        position: relative;
+    }
+
+    #row-one-container  a
+    {
+        display: block;
+        color: #b0b3b8;
+        text-align: left;
+        padding: 3vw 3vw;
+        text-decoration: none;
+        border-radius: 0px;
+        position: relative;
+        margin: 10px;
+        width: 90%;
+        font-size: 3vw;
+        transition: background-color 0.5s, color 0.5s, transform 0.5s;
+    }
+
+    #row-one-container  a:hover
+    {
+        background-color: #3A3B3C;
+    }
+
+    #row-one-container  a.active 
+    {
+        background-color: #142d709c;
+        color: rgb(18, 113, 196);
+        transform: translateY(5px);
+        width: 91.5%;
+    }
+
+    #row-one-container  p
+    {
+        margin: 0px;
+    }
+
+    .row-two
+    {
+        position: relative;
+        display: grid;
+        margin: 0%;
+        width: 100%;
+    }
+
+    .bio-container .row-two h1
+    {
+        font-size: 4vw;
+        margin: 0%;
+        position: relative;
+        margin-left: 3vw;
+        margin-bottom: 20px;
+    }
+
+    #row-two-container 
+    {
+        /*border: 1px solid #3A3B3C;*/
+        position: relative;
+        width: 90%;
+        display: block;
+        padding-top: 0%;
+        margin: auto;
+    }
+
+    #row-two-container h1
+    {
+        margin: 0%;
+        margin-bottom: 3vw;
+    }
+
+
+    #row-two-container .content-container
+    {
+        min-height: 20px;
+        width: 100%;
+        position: relative;
+        display: flex;
+        margin-bottom: 30px;
+    }
+
+    .icons
+    {
+        width: 5vw;
+        height: 5vw;
+        margin: 0px;
+    }
+
+    .companies 
+    {
+        width: 8vw;
+        height: 8vw;
+        margin: 0px;
+        border-radius: 100%;
+    }
+
+    .content-container .text-container
+    {
+        margin: 0px;
+        position: relative;
+    }
+
+    .text-container h3
+    {
+        margin: 0%;
+        font-size: 3vw;
+        color: #b0b3b8;
+    }
+
+    .text-container p
+    {
+        margin: 0%;
+        font-size: 2.5vw;
+        color: #b0b3b8;
+        line-height: 2.7vw;
+        text-align: justify;
+    }
+
+
+
+        
+}

@@ -1,0 +1,239 @@
+section.projects
+{
+    width: 100%;
+    display: grid;
+}
+
+.projects-bio-container
+{
+    width: 60vw;
+    background-color: #242526;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 3vw;
+    display: grid;
+    padding-bottom: 50px;
+}
+
+.projects-content-container
+{
+    width: 95%;
+    margin: auto;
+    /*border: 1px solid red;*/
+    display: grid;
+    gap: 1vw;
+}
+
+
+
+#projects-title
+{
+    font-size: 2vw;
+    margin: 0w;
+    position: relative;
+}
+
+#projects-horizontal-line
+{
+    border: 1px solid #3A3B3C;
+    width: 100%;
+    position: relative;
+}
+
+.projects-main
+{
+    /*border: 1px solid wheat;*/
+    width: 100%;
+    position: relative;
+    margin: auto;
+    text-align: justify;
+    display: flex;
+}
+
+.projects-main p
+{
+    color: #b0b3b8;
+    font-size: 1vw;
+    position: relative;
+    margin: 0px;
+}
+
+.projects-main img
+{
+    width: 3vw;
+    height: 3vw;
+    justify-content: center;
+    align-self: center;
+    margin-left: 1vw;
+}
+
+.projects-demo
+{
+    /*border: 1px solid fuchsia;*/
+    min-height: 10vw;
+    min-width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+#Odin
+{
+    height: 36vw;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    overflow: hidden;
+}
+
+#fullscreen-btn
+{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+}
+
+#fullscreen-btn img
+{
+    width: 2vw;
+    height: 2vw;
+}
+
+#fullscreen-btn p
+{
+    margin: 0px;
+    align-items: center;
+    transform: translateY(50%);
+    margin-left: 0.5vw;
+}
+
+.subtitle p
+{
+    font-size: 1.5vw;
+    color: #b0b3b8;
+    margin: 0px;
+}
+
+.projects-images::-webkit-scrollbar
+{
+    display: none;
+}
+
+.projects-images
+{
+    /*border: 1px solid darkcyan;*/
+    height: 10vw;
+    width: 100%;
+    position: relative;
+    margin: auto;
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrollbar */
+    white-space: nowrap; /* Prevents wrapping of content */
+    cursor: grab; /* Set cursor to grab to indicate draggable */
+    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on touch devices */
+    display: flex; /* Make children behave as flex items */
+    align-items: center; /* Center flex items vertically */
+    justify-content: center; /* Center flex items horizontally */
+}
+
+.content {
+    height: 100%; /* Height of the content */
+    width: 100vw;
+    /* Optional: Add padding/margins as needed */
+}
+
+.box {
+    width: 20vw;
+    height: 100%;
+    display: inline-block;
+    background-color: #ccc;
+    margin-right: 0.2vw;
+    transform: translateX(107%);
+}
+
+.box img
+{
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+}
+
+/* Different background colors for each box */
+.box:nth-child(1) {
+    background-color: #ff6347; /* Tomato */
+}
+
+.box:nth-child(2) {
+    background-color: #add8e6; /* Light Blue */
+}
+
+.box:nth-child(3) {
+    background-color: #98fb98; /* Pale Green */
+}
+
+.box:nth-child(4) {
+    background-color: #ffa07a; /* Light Salmon */
+}
+
+.box:nth-child(5) {
+    background-color: #ffc0cb; /* Pink */
+}
+
+.projects-link
+{
+    border: 1px solid brown;
+    height: 10vw;
+    width: 100%;
+    position: relative;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap
+}
+
+.link-cont
+{
+    width: auto;
+    height: 5vw;
+    background-color: #3A3B3C;
+    border: 1px solid white;
+    border-radius: 1vw;
+    display: flex;
+    padding: 0.5vw;
+    align-self: center;
+}
+
+.link-cont img
+{
+    position: relative;
+    width: 2.5vw;
+    height: 2.5vw;
+    align-self: center;
+}
+
+.link-cont p
+{
+    position: relative;
+    font-size: 2vw;
+    font-weight: bold;
+    align-self: center;
+    color: #cecece;
+    margin-left: 0.5vw;
+}
+
+.link-cont:hover
+{
+    background-color: #1c6cbb;
+    border: 0px;
+    animation-name: bgcolorchange;
+    animation-duration: 0.5s;
+}
+
+@keyframes bgcolorchange
+{
+    from {background-color: #3A3B3C;}
+    to {background-color: #1c6cbb;}
+
+}
+

@@ -1,0 +1,11 @@
+
+
+section.Home 
+{
+    width: 100%;
+    min-height: 200vh;
+    gap: 20px;
+    display: -ms-inline-grid;
+}
+
+

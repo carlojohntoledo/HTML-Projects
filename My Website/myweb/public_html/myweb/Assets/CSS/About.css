@@ -1,0 +1,159 @@
+section.About
+{
+    gap: 20px;
+    display: grid;
+    margin-bottom: 50px;
+}
+
+.bio-container
+{
+    min-width: 65vw;
+    width: 65%;
+    margin: auto;
+    background-color: #242526;
+    border-radius: 10px;
+    position: relative;
+    color: #b0b3b8;
+    position: relative;
+    top: 30px;
+    display: flex;
+    gap: 10px;
+    overflow: hidden;
+}
+
+.bio-container .vertical-line
+{
+    border: 0.5px solid #3A3B3C;
+    margin: 0px;
+    position: relative;
+}
+
+.bio-container .row-one h1
+{
+    font-size: 2vw;
+    margin: 10px;
+    position: relative;
+}
+
+.row-one
+{
+    min-width: 200px;
+    position: relative;
+    display: block;
+    margin: 10px;
+}
+
+#row-one-container 
+{
+    width: 100%;
+    display: block;
+    position: relative;
+}
+
+#row-one-container  a
+{
+    display: block;
+    color: #b0b3b8;
+    text-align: left;
+    padding: 10px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    position: relative;
+    margin: 10px;
+    width: 90%;
+    font-size: 14px;
+    transition: background-color 0.5s, color 0.5s, transform 0.5s;
+}
+
+#row-one-container  a:hover
+{
+    background-color: #3A3B3C;
+}
+
+#row-one-container  a.active 
+{
+    background-color: #142d709c;
+    color: rgb(18, 113, 196);
+    transform: translateY(5px);
+    width: 91.5%;
+}
+
+#row-one-container  p
+{
+    margin: 0px;
+}
+
+.row-two
+{
+    position: relative;
+    display: -ms-inline-grid;
+    margin: 20px;
+    width: 100%;
+}
+
+.bio-container .row-two h1
+{
+    font-size: 1.5vw;
+    margin: 0px;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#row-two-container 
+{
+    /*border: 1px solid #3A3B3C;*/
+    position: relative;
+    width: 96%;
+    display: block;
+    gap: 20px;
+    padding-top: 20px;
+    margin: auto;
+}
+
+#row-two-container .content-container
+{
+    min-height: 20px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.icons
+{
+    width: 2.5vw;
+    height: 2.5vw;
+    margin: 5px;
+}
+
+.companies 
+{
+    width: 3.5vw;
+    height: 3.5vw;
+    margin: 5px;
+    border-radius: 100%;
+}
+
+.content-container .text-container
+{
+    margin: 0px;
+    position: relative;
+}
+
+.text-container h3
+{
+    margin: 0px;
+    font-size: 1.2vw;
+    color: #b0b3b8;
+}
+
+.text-container p
+{
+    margin: 0px;
+    font-size: 1vw;
+    color: #b0b3b8;
+    line-height: 1.1;
+    text-align: justify;
+}
