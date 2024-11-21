@@ -1,0 +1,15 @@
+h1#title
+{
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    border: 1px solid red;
+}
+
+form#survey-form
+{
+    border: 1px solid green;
+    display: grid;
+    gap: 10px;
+    overflow: wrap;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pokeapi-proxy.freecodecamp.rocks/api/pokemon"></link>
+</head>
+
+    <body>
+
+        <!-- ***** POKEDEX CONT STARTS ***** -->
+        <div class="pokedex-cont">
+            <div class="title-cont">
+                <h1 id="title">Pokemon Search App</h1>
+            </div>
+
+
+
+
+            <!-- ***** POKEMON CONT STARTS ***** -->
+            <div id="pokemon-cont">
+            </div>
+                <!-- ***** POKEMON CONT ENDS ***** -->
+
+
+
+
+            <!-- ***** POKEMON CONT STARTS ***** -->
+            <div id="text-label">
+                ************************************* STATS *************************************
+            </div>
+            <!-- ***** POKEMON CONT ENDS ***** -->
+
+
+
+
+            <!-- ***** STATS CONT STARTS ***** -->
+            <div class="stats-cont">
+                <div id="weight-cont"><div id="statname">Weight: <p id="weight"></p></div></div>
+                <div id="height-cont"><div id="statname">Height: <p id="height"></p></div></div>
+                <div id="hp-cont"><div id="statname">HP: <p id="hp"></p></div></div>
+                <div id="attack-cont"><div id="statname">Attack: <p id="attack"></p></div></div>
+                <div id="defense-cont"><div id="statname">Defense: <p id="defense"></p></div></div>
+                <div id="speed-cont"><div id="statname">Speed: <p id="speed"></p></div></div>
+                <div id="special-attack-cont"><div id="statname">Sp.Attack: <p id="special-attack"></p></div></div>
+                <div id="special-defense-cont"><div id="statname">Sp.Defense: <p id="special-defense"></p></div></div>
+            </div>
+            <!-- ***** STATS CONT ENDS ***** -->
+
+
+
+
+            <!-- ***** NAME CONT STARTS ***** -->
+            <div class="name-cont">
+            <div id="pokemon-name">Name </div>
+            <div id="pokemon-id">ID </div>
+            <div id="types">Type(s)</div>
+            </div>
+            <!-- ***** NAME CONT ENDS ***** -->
+
+
+
+
+            <!-- ***** SEARCH CONT STARTS ***** -->
+            <div class="search-cont">
+
+                <button class="arrowkeys" id="left-btn"></button>
+                <button class="arrowkeys" id="up-btn"></button>
+                <button class="arrowkeys" id="down-btn"></button>
+                <button class="arrowkeys" id="right-btn"></button>
+
+                <input id="search-input" placeholder="Enter name or ID." required autocomplete="off"></input>
+                <button id="clear-button"></button>
+                <button id="search-button"></button>
+            </div>
+            <!-- ***** SEARCH CONT ENDS ***** -->
+
+
+
+
+        </div>
+        <!-- ***** POKEDEX CONT ENDS ***** -->
+
+        <script src="script.js"></script>
+
+    </body>
+</html>
+

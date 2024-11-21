@@ -1,0 +1,31 @@
+body
+{
+  display: grid;
+  font-family: Arial;
+}
+
+.main
+{
+  border: 1px solid;
+  margin: auto;
+  width: 400px;
+  display: grid;
+  padding: 20px;
+  border-radius: 25px;
+  box-shadow: 5px 5px;
+}
+
+#cash
+{
+  height: 50px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+#change-due
+{
+  display: grid;
+  border: 1px solid;
+  word-wrap: break-word;
+  height: auto;
+}

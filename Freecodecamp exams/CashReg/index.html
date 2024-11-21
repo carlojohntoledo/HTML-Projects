@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <div class="main-cont">
+      <label id="title">CASHIER REGISTER PROJECT</label>
+      <div id="change-screen"></div>
+    <div class="cashier-screen">
+
+      <div class="prod-cont" id="cash-cont">
+        <label class="prod-label" id="cash-title">CASH:</label>
+        <input class="input-cont" type="number" id="cash" required placeholder="$"  autocomplete="off" oninput="checkPrice()"></input>
+        <label class="prod-label" id="quantity-title">QTY:</label>
+        <input class="input-cont" type="number" id="quantity" required placeholder="$" autocomplete="off" oninput="ablePurchase()"></input>
+        
+      </div>
+      <div class="prod-cont" id="price-cont">
+        <label class="prod-label" id="price-title">PRICE:</label>
+        <input class="input-cont" type="" id="price" required placeholder="$" autocomplete="off" oninput="ablePurchase()"></input>
+        <label class="prod-label" id="name-title">NAME:</label>
+        <input class="input-cont" type="text" id="prod-name" required placeholder="Name" autocomplete="off" oninput="ablePurchase()"></input>
+
+      </div>
+      <div id="change-due">Status will be displayed here.</div>
+
+      <div id="funds-cont">
+        <div id="available-funds">
+          <label class="money-cont"id="penny">PENNY:</label>
+          <label class="money-cont"id="nickel">NICKEL:</label>
+          <label class="money-cont"id="dime">DIME:</label>
+          <label class="money-cont"id="quarter">QUARTER:</label>
+          <label class="money-cont"id="one">ONE:</label>
+          <label class="money-cont"id="five">FIVE:</label>
+          <label class="money-cont"id="ten">TEN:</label>
+          <label class="money-cont"id="twenty">TWENTY:</label>
+          <label class="money-cont"id="hundred">HUNDRED:</label>
+        </div>
+        <div id="total-funds">TOTAL:</div>
+      </div>
+      <button id="purchase-btn" disabled>Purchase</div>
+</div>
+
+
+
+    </div>
+    <script src="script.js"></script>
+    
+  </body>
+
+
+</html>
