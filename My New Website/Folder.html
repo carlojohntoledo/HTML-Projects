@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+.folder{
+    position: absolute;
+    /* border: 1px solid; */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.book {
+    margin: auto;
+    left: 0;
+    position: relative;
+    width: 380px;
+    height: 445px;
+    background-image: url("Images/folderback.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: drop-shadow(1px 1px 12px #766743);
+    -webkit-transform: preserve-3d;
+    -ms-transform: preserve-3d;
+    transform: preserve-3d;
+    -webkit-perspective: 2000px;
+    perspective: 2000px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #000;
+}
+
+.cover {
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-image: url("Images/folderfront.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 347px;
+    height: 445px;
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform-origin: 0;
+    -ms-transform-origin: 0;
+    transform-origin: 0;
+    -webkit-box-shadow: 1px 1px 12px #000;
+    box-shadow: 1px 1px 12px #7e6425;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.book:hover .cover {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform: rotatey(-80deg);
+    -ms-transform: rotatey(-80deg);
+    transform: rotatey(-80deg);
+}
+
+</style>
+<body>
+    <div class="folder">
+        <div class="book">
+            <p>Hello</p>
+            <div class="cover">
+                <p>Hover Me</p>
+            </div>
+    </div>
+    </div>
+</body>
+</html>

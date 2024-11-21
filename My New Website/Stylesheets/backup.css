@@ -1,0 +1,529 @@
+/* Scroll snapping container */
+html {
+    scroll-snap-type: y proximity; /* Enable vertical scroll snapping */
+    outline: none;
+}
+
+body {
+    display: block;
+    background-color: #82CAFF;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.tracking-area {
+    position: absolute;
+    position: sticky;
+    top: -650px;
+    display: flex;
+    background-color: #82CAFF;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    /* border: 2px dashed;For visualizing the area */
+    
+}
+
+.fixed-container
+{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: auto;
+    position: sticky;
+    top: 0;
+    /* border-bottom: 2px dashed; */
+    /* background-image: url('../Images/TreeBackground.png');
+    background-repeat: no-repeat;
+    background-size: cover; */
+    z-index: 3;
+}
+
+.landscape
+{
+    background-image: url('../Images/landscape.png');
+    width: 100%;
+    height: 100vh; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+    position: absolute;
+}
+
+
+.tree-background
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -10px;
+    left: -10px;
+    scale: 1.1;
+}
+.tree-body
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('../Images/TreeBody.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 2;
+    
+}
+.leaves-back
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('../Images/LeavesBack.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+}
+.leaves-front
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('../Images/LeavesFront.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.character {
+    position: absolute;
+    bottom: 0px;
+    left: 100px;
+    height: 300px;
+    width: 200px;
+    /* border: 1px solid; */
+    /* overflow: hidden; */
+    display: flex;
+    justify-content: center;
+    transition: transform 0.3s ease-out;
+    z-index: 11;
+    cursor: pointer;
+    filter: drop-shadow(0 0.2rem 0.25rem rgba(0, 0, 0, 0.4));
+    filter: brightness(100%);
+    outline: none;
+}
+
+
+.left-arm
+{
+    /* border: 1px solid; */
+    position: absolute;
+    height: 300px;
+    width: 350px;
+    background-image: url('../Images/koaloleftarmwave.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 4;
+    display: none;
+}
+
+.bodypatch
+{
+    position: absolute;
+    height: 300px;
+    width: 350px;
+    background-image: url('../Images/koalobodypatch.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 4;
+    display: none;
+}
+
+/* Character Container */
+.body {
+    position: absolute;
+    transform: translateX(-100%);
+    background-image: url('../Images/koaloNoHead.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    transition: transform 0.3s ease-out;
+    animation: breathe 3s infinite; /* Breathing animation */
+    z-index: 1;
+    /* border: 1px solid red; */
+}
+
+/* Head Styling */
+.sleepyhead {
+    /* background-image: url('../Images/koalofacesleepy.png'); */
+    animation: sleeping 2s infinite;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-width: 300px;
+    height: 300px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    /* transition: transform 0.4s ease-out; Smooth movement */
+    z-index: 3;
+    display: none;
+}
+
+/* Head Styling */
+.character .head {
+    background-image: url('../Images/koaloNoEyes.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-width: 300px;
+    height: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.4s ease-out; /* Smooth movement */
+    z-index: 3;
+}
+
+/* Eye Styling */
+.head .eye {
+    width: 15%;
+    height: 15%;
+    background-color: #fff;
+    border: 3px solid hsl(0, 0%, 22%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -4%;
+    overflow: hidden; /* Hide the eyelid overflow */
+}
+
+.space {
+    width: 10%;
+}
+
+/* Pupil Styling */
+.eye .pupil {
+    width: 50%;
+    height: 50%;
+    background-color: hsl(0, 0%, 25%);
+    border-radius: 50%;
+    position: absolute;
+}
+
+/* Eyelid Styling */
+.eyelid {
+    border-bottom: 3px solid hsl(0, 0%, 25%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #C0C0C0;
+    transform-origin: top;
+    transform: scaleY(0);
+    transition: transform 0.05s ease-in;
+}
+
+/* Section Styling */
+.main {
+    height: 649.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: end none; /* Snap to the center of the viewport */
+    background-color: #F5F5F5;
+    width: 90%;
+    margin: auto;
+    border-radius: 1rem;
+    border: 3px solid black;
+    margin-bottom: 50px;
+    
+}
+
+#first-section
+{
+    margin-bottom: 50px;
+}
+
+#second-section {
+    background-color: #F5F5F5;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+#third-section {
+    background-color: #F5F5F5;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+
+#fourth-section {
+    background-color: #F5F5F5;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+
+/* Breathing Animation */
+@keyframes breathe {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.01);
+    }
+}
+
+/* Blinking Animation */
+@keyframes blink {
+    0%, 20%, 100% {
+        transform: scaleY(0);
+    }
+    10% {
+        transform: scaleY(1);
+    }
+}
+
+/* Dizzy Animation */
+@keyframes dizzy {
+    0%, 100% { transform: rotate(0deg); }
+    20% { transform: rotate(20deg); }
+    40% { transform: rotate(-20deg); }
+    60% { transform: rotate(20deg); }
+    80% { transform: rotate(-20deg); }
+}
+
+.head.dizzy {
+    animation: dizzy 2s ease-in-out;
+    background-image: url('../Images/koaloDizzyState.png'); /* Change to your dizzy state image */
+}
+
+.head.dizzy .eye {
+    display: none; /* Hide the eyes during dizzy state */
+}
+
+
+/* Animation */
+@keyframes swing {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(0.3deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-0.2deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/* Apply random animations */
+#back-leaves {
+    animation: swing 5s infinite ease-in-out alternate;
+}
+
+
+#front-leaves {
+    animation: swing 4s infinite ease-in-out alternate;
+}
+
+/* Adjusting each part's animation delay and duration for randomness */
+#back-leaves {
+    animation-duration: calc(2s + 1s * (random() - 0.2));
+    animation-delay: calc(1s * (random() - 0.3));
+}
+
+#front-leaves {
+    animation-duration: calc(7s + 4s * (random() - 1));
+    animation-delay: calc(3s * (random() - 0.5));
+}
+
+/* Waving Animation */
+@keyframes wave {
+    0%, 100% { transform: rotate(-1deg); }
+    50% { transform: rotate(10deg); }
+}
+
+.waving .head {
+    background-image: url('../Images/koalofacehappy.png'); /* Image for the waving head */
+}
+
+.waving .body {
+    background-image: url('../Images/koaloWavingBody.png'); /* Image for the waving body */
+}
+
+.waving .eye {
+    visibility: hidden; /* Hide eyes during waving */
+}
+
+.waving .bodypatch {
+    display: flex;
+}
+
+.waving .left-arm {
+    display: block; /* Show left arm during waving */
+    animation: wave 0.8s infinite ease-in-out;
+}
+
+
+
+/* sky styling */
+.sky-container {
+    position: absolute;
+    top: -320px;
+    left: -300px;
+    z-index: 0;
+    rotate: 360deg;
+}
+
+.sky {
+
+    width: 2120px;
+    height: 2120px;
+    background-image: url('../Images/skybackground.png'); /* Add your sky image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    
+}
+
+.floating-zs {
+    position: absolute;
+    left: 33%; /* Adjust based on character's position */
+    animation: floatZs 2s infinite ease-in-out;
+    width: 100px;
+    height: 100px;
+    /* border: 1px solid white; */
+    background-image: url("../Images/floatingZ.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@keyframes floatZs {
+    0% {
+        transform: translate(-50%, 0) scale(0);
+        opacity: 0;
+        transform: translateY(0px);
+        scale: 10%;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -100px) scale(1.5);
+        opacity: 0;
+        transform: translateY(-120px);
+    }
+}
+
+
+@keyframes sleeping {
+    0% { 
+        opacity: 1; 
+        background-image: url("../Images/koalofacesleepy.png");
+    }
+     49% { 
+        opacity: 1; 
+        background-image: url("../Images/koalofacesleepy.png");
+    }
+     50% { 
+        opacity: 1; 
+        background-image: url("../Images/koalofacesleepy2.png");
+    }
+    100% { 
+        opacity: 1; 
+        background-image: url("../Images/koalofacesleepy2.png");
+    }
+}
+
+
+/* for menu Buttons */
+.menu-btn-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 12px;
+    border: 4px solid rgb(80, 80, 80);
+    background-color: rgb(225, 169, 114);
+    z-index: 10;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menu-btn-container .radio input {
+  display: none;
+  
+}
+
+.name{
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    border-radius: 0.5rem;   
+    position: relative;
+    background-color: #e74c3c;
+    box-shadow: #c0392b 0px 7px 2px;
+    color: #99352a;
+    min-width: 80px;
+}
+
+.menu-btn-container .radio input:checked + .name {
+    
+    background: var(--bg);
+    color: var(--text-color);
+    padding: 1em;
+    top: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.2s;
+    border-radius: 0.5rem;
+    box-shadow: #c0392b 0px 2px 2px;
+    background-color: #e74c3c;
+    color: #5f201a;
+    /* border: 3px solid black; */
+}
+.menu-btn-container .radio input + .name:hover {
+    color: #fff;
+    background-color: #f85a48;
+}
+.menu-btn-container .radio input:checked + .name:hover {
+  color: #8f3026;
+}
+
+.menu-btn-container .radio input:checked + .name::after,
+.menu-btn-container .radio input:checked + .name::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  bottom: 0;
+}
+
+.menu-btn-container .radio input:checked + .name::after {
+  right: -10px;
+  border-bottom-left-radius: 300px;
+}
+.menu-btn-container .radio input:checked + .name::before {
+  left: -10px;
+  border-bottom-right-radius: 300px;
+  
+}

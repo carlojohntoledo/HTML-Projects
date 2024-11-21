@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Images/koalo.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="Stylesheets/style.css">
+    <link rel="stylesheet" href="Stylesheets/character.css">
+    <link rel="stylesheet" href="Stylesheets/animation.css">
+    <link rel="stylesheet" href="Stylesheets/side-button-style.css">
+    <link rel="stylesheet" href="Stylesheets/folder.css">
+    <title>Koalo</title>
+</head>
+<body>
+    
+  <div class="tracking-area" id="tracking-area">
+      
+    <div class="gear" id="gearOne"></div>
+    <div class="gear" id="gearTwo"></div>
+    <div class="gear" id="gearThree"></div>
+    <div class="gear" id="gearFour"></div>
+
+    <div class="folder-container" id="folder-container">
+      <div class="folder" >
+        <div class="book">
+          <p>Hello I'm Koalo</p>
+          <div class="cover">
+            <p>FILE</p>
+          </div>
+        </div>
+        <div class="cancel-btn-container">
+          <div class="cancel-btn" id="cancel-btn" onclick="hideFolder()">
+            <button class="cancel-button1">X
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-btn-container">
+      <div class="side-buttons" id="side-buttons">
+        <div class="side-button-pair">
+          <div class="side-btn">
+            <button class="side-button1" onclick="showFolder()">?
+
+            </button>
+          </div>
+          <div class="side-btn">
+            <button class="side-button2">
+
+            </button>
+          </div>
+        </div>
+        <div class="side-button-pair">
+          <div class="side-btn">
+            <button class="side-button3">
+              <span class="side-button-text"></span>
+            </button>
+          </div>
+          <div class="side-btn">
+            <button class="side-button4">
+              <span class="side-button-text"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+        
+    </div>
+
+    <div class="menu-btn-container" id="menu-btn-container">
+        
+      <label class="radio" style="z-index: 2;">
+        <input type="radio" name="radio"  />
+        <span class="name" id="profile">PROFILE</span>
+      </label>
+      <label class="radio">
+        <input type="radio" name="radio" />
+        <span class="name" id="skills">SKILLS</span>
+      </label>
+    
+      <label class="radio">
+        <input type="radio" name="radio" />
+        <span class="name" id="projects">PROJECTS</span>
+      </label>
+
+      <label class="radio">
+          <input type="radio" name="radio" />
+          <span class="name" id="contact">CONTACT</span>
+        </label>
+    </div>
+
+    <div class="character" id="character"> 
+      <div class="body" id="characterbody">
+        <div class="left-arm" id="left-arm"></div>
+        <div class="bodypatch" id="bodypatch"></div>
+        <div class="sleepyhead" id="sleepyhead">
+          <div id="floatingZs" class="floating-zs"></div>
+        </div>
+        <div class="head" id="head">
+          <div class="eye" id="left-eye">
+            <div class="pupil"></div>
+            <div class="eyelid"></div>
+          </div>
+          <div class="space"></div>
+          <div class="eye" id="right-eye">
+            <div class="pupil"></div>
+            <div class="eyelid"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fixed-container" id="fixed-container"></div>
+            
+
+    <div class="sky-container" id="sky-container">
+      <div class="sky" id="sky"></div>
+    </div>
+    <div class="landscape"></div>
+    <div class="tree-background" id="tree-background">
+      <div class="tree-body"></div>
+      <div class="leaves-back" id="back-leaves"></div>
+      <div class="leaves-front" id="front-leaves"></div>
+    </div>
+
+    <div class="chains" id="chains"></div>
+            
+  </div>
+
+  <div class="section-cont">
+    <section class="main" id="profile-section">
+      <h1>PROFILE</h1>
+    </section>
+    <section class="main" id="skills-section">
+      <h1>SKILLS</h1>
+    </section>
+    <section class="main" id="projects-section">
+      <h1>PROJECTS</h1>
+    </section>
+    <section class="main" id="contact-section">
+      <h1>CONTACT</h1>
+    </section>
+  </div>
+
+  <script src="Scripts/const.js"></script>
+  <script src="Scripts/handlemouse.js"></script>
+  <script src="Scripts/handlemouseLeave.js"></script>
+  <script src="Scripts/handlemouseEnter.js"></script>
+  <script src="Scripts/scrolltotop.js"></script>
+  <script src="Scripts/animation.js"></script>
+  <script src="Scripts/charactertomenubuttons.js" ></script>
+  <script src="Scripts/rotation.js"></script>
+  <script src="Scripts/sky.js"></script>
+  <script src="Scripts/sidebuttons.js"></script>
+  <script src="Scripts/main.js"></script>
+  <!-- <script src="Scripts/backup.js"></script> -->
+</body>
+</html>
